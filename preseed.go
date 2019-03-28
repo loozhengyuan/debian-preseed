@@ -38,5 +38,5 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 func editConfig(hostname string) string {
 	// Replace the hostname on config file based on url path
-	return strings.ReplaceAll(config, "forced-hostname", hostname)
+	return strings.Replace(config, "forced-hostname", hostname, 1)
 }
